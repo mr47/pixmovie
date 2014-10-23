@@ -1,0 +1,30 @@
+<%-partial("header",{desc:''})%>
+<div id="container">
+		<ul class="FavList">
+		<%for (i=0;i<page.length;i++){%>
+			<li>
+				<div class="img-wrap">
+					<a href="/hq/<%=page[i].id%>" class="id">#<%=page[i].id+1%></a>
+					<img src="/data/<%=page[i].image_name%>"/>
+				</div>
+				<p><% if (page[i].quote==null){%> <%="..."%> <%} else {%><%=page[i].quote%><%}%></p>
+				<div class="info">
+					<a href="#" class="user"><%=page[i].name%></a>
+					<a href="<%=page[i].link%>" target="_blank" class="imdb" title="">IMDB: <%=page[i].imdbRating%></a>
+					<a href="#"	class="date" title="">Genre: <%=page[i].Genre%></a>
+				</div>
+				<div class="divider"></div>
+            </li>			
+		<%}%>
+		<li>
+			<div class="paginator">
+				<%for(i=pp;i>0;i--){%>
+					<%if(main_page==i){%><a href="/" class="page"><%=i%></a><%} else {%>
+						<a href="/page/<%=i%>" class="page"><%=i%></a>
+					<%}%>
+				<%}%>
+			</div>
+		</li>
+		</ul>
+</div>		
+<%-partial("footer")%>

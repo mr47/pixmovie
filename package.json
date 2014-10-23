@@ -1,0 +1,12 @@
+{
+  "name": "pixmovie",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "2.5.x",
+	"ejs": "0.7.x",
+	"request": "2.9.x"
+  },
+  "engines": {
+    "node": "0.6.17"
+  }
+}

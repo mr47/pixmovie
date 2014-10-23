@@ -1,0 +1,19 @@
+<%-partial("header",{desc:page.quote,film:page.name,rate:'IMDB : '+page.imdbRating})%>
+<div id="container">
+		<ul class="FavList">
+			<li>
+				<div class="img-wrap">
+					<a href="/hq/<%=page.id%>" class="id">#<%=(page.id+1)%></a>
+					<img src="/data/<%=page.image_name%>"/>
+				</div>
+				<p><% if (page.quote==null){%> <%="..."%> <%} else {%><%=page.quote%><%}%></p>
+				<div class="info">
+					<a href="#" class="user"><%=page.name%></a>
+					<a href="<%=page.link%>" target="_blank" class="imdb" title="">IMDB: <%=page.imdbRating%></a>
+					<a href="#"	class="date" title="">Genre: <%=page.Genre%></a>
+				</div>
+				<div class="divider"></div>
+            </li>			
+		</ul>
+</div>
+<%-partial("footer")%>
